@@ -2,256 +2,229 @@
 body,
 h1,
 h2,
+h3,
 p,
 ul,
+li,
 table {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Basic Styling */
 body {
   font-family: "Arial", sans-serif;
-  direction: rtl; /* Right-to-left text direction */
-  background-color: #f4f4f4;
+  line-height: 1.8;
   color: #333;
-  font-size: 16px; /* Base font size */
+  background-color: #f4f4f4;
+  padding: 0 20px;
+  direction: rtl; /* Right-to-left text alignment */
 }
 
 header {
-  background-color: #003366; /* Dark blue */
-  color: white;
+  background-color: #003366; /* Dark Blue */
+  color: #fff;
+  padding: 15px 20px;
   text-align: center;
-  padding: 20px;
-  border-bottom: 5px solid #006400; /* Dark green border */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
 }
 
 nav {
-  background-color: #eee;
-  padding: 10px;
-  border-bottom: 2px solid #003366; /* Dark blue border */
+  background: #003366; /* Dark Blue */
+  color: #fff;
+  padding: 15px 20px;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
-  display: flex;
-  justify-content: center;
+  text-align: right; /* Right-to-left text alignment */
 }
 
 nav ul li {
-  margin: 0 10px;
+  display: inline-block;
+  margin-left: 10px;
 }
 
 nav ul li a {
-  color: #003366; /* Dark blue */
+  color: #fff;
   text-decoration: none;
-  font-size: 18px; /* Larger font size for navigation links */
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #006400; /* Dark green on hover */
-  text-decoration: underline;
+  color: #b3c6e0; /* Light Blue for hover effect */
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
   margin: 20px auto;
+  max-width: 1200px;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  font-size: 18px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .section {
-  margin-bottom: 20px;
-}
-
-h1 {
-  font-size: 2.5em; /* Larger font size for the main header */
+  margin-bottom: 30px;
 }
 
 h2 {
-  border-bottom: 2px solid #003366; /* Dark blue border */
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  font-size: 2em; /* Larger font size for section headers */
+  background-color: #003366; /* Dark Blue */
+  color: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  transition: background-color 0.3s;
+}
+
+h2:hover {
+  background-color: #002244; /* Darker Blue for hover effect */
 }
 
 ul {
-  margin: 10px 0;
+  margin: 15px 0;
+  padding-right: 20px; /* Right padding for RTL */
 }
 
 ul li {
-  margin-bottom: 12px; /* Increased spacing between list items */
-  transition: background-color 0.3s ease; /* Smooth background color transition */
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  transition: color 0.3s, background-color 0.3s;
 }
 
 ul li:hover {
-  background-color: #f0f0f0; /* Light gray background on hover */
+  color: #003366; /* Dark Blue text on hover */
+  background-color: #e9ecef; /* Light gray background on hover */
+  padding: 10px; /* Padding for hover effect */
+  border-radius: 5px; /* Rounded corners */
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 table th,
 table td {
+  padding: 15px;
+  text-align: right; /* Right-to-left text alignment */
   border: 1px solid #ddd;
-  padding: 12px; /* Increased padding for better readability */
-  text-align: right;
-  transition: background-color 0.3s ease; /* Smooth background color transition */
+  transition: background-color 0.3s, color 0.3s;
 }
 
 table th {
-  background-color: #003366; /* Dark blue */
-  color: white;
-  font-size: 1.2em; /* Larger font size for table headers */
+  background-color: #003366; /* Dark Blue */
+  color: #fff;
 }
 
-table td:hover {
-  background-color: #f0f0f0; /* Light gray background on hover */
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #e9ecef; /* Light gray background on hover */
 }
 
 a {
-  color: #003366; /* Dark blue */
+  color: #003366; /* Dark Blue */
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-size: 1.1em;
+  transition: color 0.3s;
 }
 
 a:hover {
-  color: #006400; /* Dark green on hover */
+  color: #b3c6e0; /* Light Blue for hover effect */
   text-decoration: underline;
 }
 
-p {
-  font-size: 1.4em; /* Increased font size for paragraphs */
-  line-height: 1.8; /* Increased line height for better readability */
-  margin-bottom: 20px; /* Added margin to separate paragraphs */
-}
-
-/* Interactive Accordions */
-.accordion {
-  background-color: #003366; /* Dark blue */
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  border: none;
-  text-align: right;
-  border-radius: 5px;
-  font-size: 1.2em;
-  margin-top: 10px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.accordion:hover {
-  background-color: #006400; /* Dark green on hover */
-  transform: scale(1.05); /* Slightly enlarge the button on hover */
-}
-
-.panel {
-  padding: 0 10px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-
-/* Animated Buttons */
-button {
-  background-color: #003366; /* Dark blue */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-  background-color: #006400; /* Dark green on hover */
-  transform: scale(1.05); /* Slightly enlarge the button on hover */
-}
-
-/* Section Titles */
-.section h2 {
-  font-size: 2.2em; /* Larger font size for section titles */
-  color: #003366; /* Dark blue color */
-  margin-bottom: 15px; /* Margin below section titles */
-}
-
-/* Interactive Navigation Menu */
-nav ul {
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  position: relative;
-}
-
-nav ul li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-nav ul li:hover ul {
-  display: block;
-}
-
-nav ul li ul li {
-  padding: 10px;
-  width: 200px;
-}
-
-nav ul li ul li a {
-  color: #003366;
-}
-
-nav ul li ul li a:hover {
-  background-color: #f0f0f0;
-}
-/* Styles for the assessment section */
 .assessment {
-  background-color: #f4f4f9;
+  background-color: #e9ecef;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-}
-
-.assessment h2 {
-  font-size: 24px;
-  color: #003366; /* Dark blue color */
-  border-bottom: 2px solid #003366;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .assessment-item {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #fff;
+  border-left: 5px solid #003366; /* Dark Blue */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.assessment-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
 }
 
 .assessment-item h3 {
-  font-size: 20px;
-  color: #003366; /* Dark blue color */
-  border-bottom: 1px solid #003366;
-  padding-bottom: 5px;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #003366; /* Dark Blue */
 }
 
-.assessment-item p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #333;
+.accordion {
+  background-color: #003366; /* Dark Blue */
+  color: #fff;
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  text-align: right; /* Right-to-left text alignment */
+  outline: none;
+  font-size: 1.3em;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.accordion.active,
+.accordion:hover {
+  background-color: #002244; /* Darker Blue */
+  transform: scale(1.02);
+}
+
+.panel {
+  padding: 15px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  font-size: 1.1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Interactive Buttons */
+button,
+.accordion {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover,
+.accordion:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+    text-align: right; /* Right-to-left text alignment */
+  }
+
+  .container {
+    padding: 15px;
+  }
 }
