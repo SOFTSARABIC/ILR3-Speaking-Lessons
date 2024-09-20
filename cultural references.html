@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arabic Phrases and Proverbs App</title>
+    <link rel="stylesheet" href="styles1.css" />
+    <style>
+      /* Enhanced styles for meanings and examples */
+      .meaning {
+        background-color: #e6f7ff; /* Light blue background */
+        border-left: 5px solid #007bff; /* Blue left border */
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+      }
+
+      .arabic-examples {
+        list-style-type: disc; /* Bullet points */
+        padding-left: 20px; /* Indentation */
+      }
+
+      .arabic-example {
+        background-color: #f0f8ff; /* Alice Blue */
+        border: 1px solid #007bff; /* Blue border */
+        border-radius: 5px;
+        padding: 8px;
+        margin: 5px 0;
+        direction: rtl; /* Right-to-left text direction */
+      }
+
+      .arabic {
+        direction: rtl; /* Right-to-left text direction */
+        text-align: right; /* Align text to the right */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Arabic Phrases and Proverbs</h1>
+      <input
+        type="text"
+        id="search"
+        placeholder="Search by Arabic phrase, literal meaning, or English equivalent..."
+      />
+
+      <div class="button-group">
+        <button id="linkingPhrasesBtn" class="toggle-btn">
+          Show Linking Phrases
+        </button>
+        <button id="proverbsBtn" class="toggle-btn">Show Proverbs</button>
+      </div>
+
+      <div id="linkingPhrases" class="item hidden">
+        <h2>الجمل الانتقالية (Linking Phrases)</h2>
+
+        <div class="phrase">
+          <p><span class="arabic">كمان</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Also</p>
+            <p class="english-equivalent">Moreover</p>
+          </div>
+          <p class="context">Used to add information.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">كمان لازم نراعي العوامل الاقتصادية.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">غير هيك</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Other than that</p>
+            <p class="english-equivalent">Besides</p>
+          </div>
+          <p class="context">Used to introduce an additional point.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">غير هيك، البيئة مهمة كتير.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">من جهة تانية</span></p>
+          <div class="meaning">
+            <p class="literal-translation">On another side</p>
+            <p class="english-equivalent">On the other hand</p>
+          </div>
+          <p class="context">Used to present an opposing viewpoint.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic"
+                >التعليم التقليدي له فوائد، من جهة تانية، التعليم عن بعد عنده
+                مزايا كمان.</span
+              >
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بس</span></p>
+          <div class="meaning">
+            <p class="literal-translation">But</p>
+            <p class="english-equivalent">However</p>
+          </div>
+          <p class="context">Used to present a contrast.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">كان الجو بارد، بس رحنا للحديقة.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">مع هيك</span></p>
+          <div class="meaning">
+            <p class="literal-translation">With this</p>
+            <p class="english-equivalent">Even so</p>
+          </div>
+          <p class="context">Used to express a contrast despite a condition.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">مع هيك، كانت النتائج إيجابية.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بالمقابل</span></p>
+          <div class="meaning">
+            <p class="literal-translation">In return</p>
+            <p class="english-equivalent">In contrast</p>
+          </div>
+          <p class="context">Used to contrast or compare two things.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">أنت ساعدتني، بالمقابل رح أساعدك.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بشكل عام</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Generally</p>
+            <p class="english-equivalent">Overall</p>
+          </div>
+          <p class="context">Used to summarize or generalize.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">بشكل عام، الأكل جزء مهم من الثقافة.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">كمان</span></p>
+          <div class="meaning">
+            <p class="literal-translation">As well as</p>
+            <p class="english-equivalent">In addition</p>
+          </div>
+          <p class="context">Used to introduce additional information.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">كمان القراءة بتعزز التفكير النقدي.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">عشان هيك</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Therefore</p>
+            <p class="english-equivalent">Thus</p>
+          </div>
+          <p class="context">Used to show cause and effect.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">عشان هيك، لازم نعمل قرارات مدروسة.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">في النهاية</span></p>
+          <div class="meaning">
+            <p class="literal-translation">In the end</p>
+            <p class="english-equivalent">Ultimately</p>
+          </div>
+          <p class="context">Used to indicate the final outcome.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">في النهاية، حققنا أهدافنا.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">أول شي، تاني شي، تالت شي</span></p>
+          <div class="meaning">
+            <p class="literal-translation">First, Second, Third</p>
+            <p class="english-equivalent">Firstly, Secondly, Thirdly</p>
+          </div>
+          <p class="context">Used to list points.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic"
+                >أول شي، لازم نأكل فطور. تاني شي، لازم نخطط لليوم.</span
+              >
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">مثلاً</span></p>
+          <div class="meaning">
+            <p class="literal-translation">For the example of</p>
+            <p class="english-equivalent">For example</p>
+          </div>
+          <p class="context">
+            Used to introduce an example to clarify a point.
+          </p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic"
+                >مثلاً، التعليم عن بعد بيتيح مرونة أكبر.</span
+              >
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <!-- Additional phrases -->
+
+        <div class="phrase">
+          <p><span class="arabic">بينما</span></p>
+          <div class="meaning">
+            <p class="literal-translation">While</p>
+            <p class="english-equivalent">Whereas</p>
+          </div>
+          <p class="context">Used to show a contrast between two things.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic"
+                >بينما يحب الناس الأفلام، أنا أفضل القراءة.</span
+              >
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">مع هيك</span></p>
+          <div class="meaning">
+            <p class="literal-translation">With that</p>
+            <p class="english-equivalent">Nevertheless</p>
+          </div>
+          <p class="context">Used to express a contrast despite a condition.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic"
+                >كانت النتائج مخيبة، مع هيك، تعلمنا الكثير.</span
+              >
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بشكل خاص</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Specifically</p>
+            <p class="english-equivalent">In particular</p>
+          </div>
+          <p class="context">Used to highlight a specific point.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">بشكل خاص، أحب المأكولات الشرقية.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">على سبيل المثال</span></p>
+          <div class="meaning">
+            <p class="literal-translation">On the example</p>
+            <p class="english-equivalent">For instance</p>
+          </div>
+          <p class="context">Used to introduce an example.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic"
+                >على سبيل المثال، يمكن أن نتعلم من التجارب الماضية.</span
+              >
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">لإنو</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Because</p>
+            <p class="english-equivalent">Since</p>
+          </div>
+          <p class="context">Used to explain a reason.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">لإنو الجو حار، رح نروح على البحر.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">و بعد هيك</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Then</p>
+            <p class="english-equivalent">Afterward</p>
+          </div>
+          <p class="context">Used to indicate the next step in a sequence.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic"
+                >أولاً، نبدأ بالدراسة. و بعد هيك، نراجع المعلومات.</span
+              >
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">إضافةً لهيك</span></p>
+          <div class="meaning">
+            <p class="literal-translation">In addition to that</p>
+            <p class="english-equivalent">Additionally</p>
+          </div>
+          <p class="context">Used to add further information.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">إضافةً لهيك، في فوائد صحية.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">من ناحيتي</span></p>
+          <div class="meaning">
+            <p class="literal-translation">From my side</p>
+            <p class="english-equivalent">For my part</p>
+          </div>
+          <p class="context">Used to express a personal opinion.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">من ناحيتي، التعليم عن بعد أفضل.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بصراحة</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Honestly</p>
+            <p class="english-equivalent">To be frank</p>
+          </div>
+          <p class="context">Used to introduce a candid opinion.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">بصراحة، ما حبيت الفيلم.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">على الرغم من</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Despite</p>
+            <p class="english-equivalent">In spite of</p>
+          </div>
+          <p class="context">Used to show contrast despite a condition.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">على الرغم من التعب، رح نكمل المشروع.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">في حال</span></p>
+          <div class="meaning">
+            <p class="literal-translation">In case</p>
+            <p class="english-equivalent">If</p>
+          </div>
+          <p class="context">Used to indicate a condition.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">في حال احتجت أي مساعدة، أنا موجود.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">لنكون واضحين</span></p>
+          <div class="meaning">
+            <p class="literal-translation">To be clear</p>
+            <p class="english-equivalent">Let’s be clear</p>
+          </div>
+          <p class="context">Used to clarify a point.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">لنكون واضحين، هذا القرار صعب.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بمناسبة</span></p>
+          <div class="meaning">
+            <p class="literal-translation">On the occasion</p>
+            <p class="english-equivalent">On the occasion of</p>
+          </div>
+          <p class="context">Used to introduce a context for a discussion.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">بمناسبة عيد ميلادك، أريد أن أهنيك.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">وبالتالي</span></p>
+          <div class="meaning">
+            <p class="literal-translation">And so</p>
+            <p class="english-equivalent">Thus</p>
+          </div>
+          <p class="context">Used to indicate a result.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">وبالتالي، كان علينا اتخاذ إجراء سريع.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">في المقابل</span></p>
+          <div class="meaning">
+            <p class="literal-translation">In return</p>
+            <p class="english-equivalent">Conversely</p>
+          </div>
+          <p class="context">Used to compare two opposite situations.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">في المقابل، تكاليف التعليم عالية جداً.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">يعني</span></p>
+          <div class="meaning">
+            <p class="literal-translation">That is</p>
+            <p class="english-equivalent">I mean</p>
+          </div>
+          <p class="context">Used to clarify or explain a point.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic"
+                >ما كان عندي وقت، يعني ما قدرت أخلص الدراسة.</span
+              >
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">من المهم أن</span></p>
+          <div class="meaning">
+            <p class="literal-translation">It’s important to</p>
+            <p class="english-equivalent">It is crucial to</p>
+          </div>
+          <p class="context">
+            Used to emphasize the significance of an action.
+          </p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">من المهم أن نكون صادقين.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بس</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Only</p>
+            <p class="english-equivalent">Just</p>
+          </div>
+          <p class="context">Used to indicate limitation.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">بس كان عندي ساعة وحدة.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">لأنو كمان</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Because also</p>
+            <p class="english-equivalent">Because too</p>
+          </div>
+          <p class="context">Used to add a reason.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">لأنو كمان رح تخلص دراستي، رح أسافر.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بالمختصر</span></p>
+          <div class="meaning">
+            <p class="literal-translation">In summary</p>
+            <p class="english-equivalent">To sum up</p>
+          </div>
+          <p class="context">Used to summarize a discussion.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">بالمختصر، التعليم مهم.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">على العكس من هيك</span></p>
+          <div class="meaning">
+            <p class="literal-translation">On the contrary</p>
+            <p class="english-equivalent">Conversely</p>
+          </div>
+          <p class="context">Used to indicate a contradiction.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic"
+                >على العكس من هيك، التعليم عن بعد فعّال.</span
+              >
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بالنهاية</span></p>
+          <div class="meaning">
+            <p class="literal-translation">At the end</p>
+            <p class="english-equivalent">Ultimately</p>
+          </div>
+          <p class="context">Used to conclude a discussion.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">بالنهاية، كلنا نتعلم.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">باختصار</span></p>
+          <div class="meaning">
+            <p class="literal-translation">In short</p>
+            <p class="english-equivalent">In a nutshell</p>
+          </div>
+          <p class="context">Used to express brevity.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">باختصار، الدراسة مهمة.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">عموماً</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Generally</p>
+            <p class="english-equivalent">In general</p>
+          </div>
+          <p class="context">Used to indicate a general statement.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">عموماً، الطلاب يحبوا التعلم.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بس بدي أقول</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Just want to say</p>
+            <p class="english-equivalent">I just want to say</p>
+          </div>
+          <p class="context">Used to express a thought.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">بس بدي أقول إني ممتن.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">مثلما</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Like</p>
+            <p class="english-equivalent">As</p>
+          </div>
+          <p class="context">Used to draw a comparison.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">مثلما نحن نتعلم، نتطور.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">ببساطة</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Simply</p>
+            <p class="english-equivalent">Just</p>
+          </div>
+          <p class="context">Used to simplify a point.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">ببساطة، التعليم هو المفتاح.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">ما عنا خيار</span></p>
+          <div class="meaning">
+            <p class="literal-translation">We have no choice</p>
+            <p class="english-equivalent">We have no option</p>
+          </div>
+          <p class="context">Used to express a lack of alternatives.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">ما عنا خيار غير نكمل العمل.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">حقيقةً</span></p>
+          <div class="meaning">
+            <p class="literal-translation">In fact</p>
+            <p class="english-equivalent">Actually</p>
+          </div>
+          <p class="context">Used to introduce a fact.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic"
+                >حقيقةً، التعليم يساعد على التفكير النقدي.</span
+              >
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بفضل</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Thanks to</p>
+            <p class="english-equivalent">Due to</p>
+          </div>
+          <p class="context">Used to express gratitude or attribution.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">بفضل التعليم، في تطور مستمر.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">لأنو مش معقول</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Because it's unreasonable</p>
+            <p class="english-equivalent">Because it's absurd</p>
+          </div>
+          <p class="context">Used to express disbelief.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">لأنو مش معقول، ما بصدق اللي عم بصير.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بتمنّى</span></p>
+          <div class="meaning">
+            <p class="literal-translation">I hope</p>
+            <p class="english-equivalent">I wish</p>
+          </div>
+          <p class="context">Used to express a desire.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">بتمنّى إلك كل التوفيق.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بدل ما</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Instead of</p>
+            <p class="english-equivalent">Rather than</p>
+          </div>
+          <p class="context">Used to suggest an alternative.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">بدل ما نروح، خلينا ندرس.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">طبيعي</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Natural</p>
+            <p class="english-equivalent">Normal</p>
+          </div>
+          <p class="context">Used to indicate something typical.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">طبيعي نواجه صعوبات.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بكل شفافية</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Honestly</p>
+            <p class="english-equivalent">To be honest</p>
+          </div>
+          <p class="context">Used to express honesty.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">بكل شفافية، أنا مش متأكد.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بقدر الإمكان</span></p>
+          <div class="meaning">
+            <p class="literal-translation">As much as possible</p>
+            <p class="english-equivalent">As far as I can</p>
+          </div>
+          <p class="context">Used to express effort.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">بقدر الإمكان، رح أساعدك.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بالمختصر المفيد</span></p>
+          <div class="meaning">
+            <p class="literal-translation">In useful summary</p>
+            <p class="english-equivalent">In short</p>
+          </div>
+          <p class="context">Used to summarize effectively.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">بالمختصر المفيد، نحتاج نعمل أكثر.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">بالنسبة إلي</span></p>
+          <div class="meaning">
+            <p class="literal-translation">For me</p>
+            <p class="english-equivalent">In my opinion</p>
+          </div>
+          <p class="context">Used to express a personal viewpoint.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">بالنسبة إلي، التعليم هو الأساس.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">كما أن</span></p>
+          <div class="meaning">
+            <p class="literal-translation">As well as</p>
+            <p class="english-equivalent">Also</p>
+          </div>
+          <p class="context">Used to add information.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">كما أن التعليم يعزز الثقافة.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">كل ما</span></p>
+          <div class="meaning">
+            <p class="literal-translation">All that</p>
+            <p class="english-equivalent">Everything that</p>
+          </div>
+          <p class="context">Used to refer to everything mentioned.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">كل ما تعلمناه يساعدنا في الحياة.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">ممكن يكون</span></p>
+          <div class="meaning">
+            <p class="literal-translation">Could be</p>
+            <p class="english-equivalent">It might be</p>
+          </div>
+          <p class="context">Used to express possibility.</p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">ممكن يكون التعليم عن بعد أفضل.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p><span class="arabic">و مش بس هيك، بس</span></p>
+          <div class="meaning">
+              <p class="literal-translation">And not only that, but</p>
+              <p class="english-equivalent">Moreover</p>
+          </div>
+          <p class="context">Used to add more information or emphasis.</p>
+          <ul class="arabic-examples">
+              <li class="arabic-example">
+                  <span class="arabic">و مش بس هيك، بس التعليم كمان بيعزز الثقافة.</span>
+              </li>
+          </ul>
+          <div class="divider"></div>
+      </div>
+      <div class="phrase">
+        <p><span class="arabic">عفوا</span></p>
+        <div class="meaning">
+            <p class="literal-translation">Pardon me</p>
+            <p class="english-equivalent">Excuse me</p>
+        </div>
+        <p class="context">Used to apologize for a mistake.</p>
+        <ul class="arabic-examples">
+            <li class="arabic-example">
+                <span class="arabic">عفوا، ما كنت قاصد.</span>
+            </li>
+        </ul>
+        <div class="divider"></div>
+    </div>
+    
+    <div class="phrase">
+        <p><span class="arabic">فكرني فهمت عليك، انت قلت...</span></p>
+        <div class="meaning">
+            <p class="literal-translation">I think I understand what you’re saying</p>
+            <p class="english-equivalent">I get your point</p>
+        </div>
+        <p class="context">Used to express understanding of someone's statement.</p>
+        <ul class="arabic-examples">
+            <li class="arabic-example">
+                <span class="arabic">فكرني فهمت عليك، انت قلت إنه مهم.</span>
+            </li>
+        </ul>
+        <div class="divider"></div>
+    </div>
+    
+    <div class="phrase">
+        <p><span class="arabic">هالشي رهيب كتير!</span></p>
+        <div class="meaning">
+            <p class="literal-translation">This is very interesting!</p>
+            <p class="english-equivalent">That's fascinating!</p>
+        </div>
+        <p class="context">Used to express enthusiasm or interest.</p>
+        <ul class="arabic-examples">
+            <li class="arabic-example">
+                <span class="arabic">هالشي رهيب كتير، ما كنت عارف هيك من قبل.</span>
+            </li>
+        </ul>
+        <div class="divider"></div>
+    </div>
+    
+    <div class="phrase">
+        <p><span class="arabic">و كل هالشي كان عشان ...</span></p>
+        <div class="meaning">
+            <p class="literal-translation">And all that was to ...</p>
+            <p class="english-equivalent">And that was meant to ...</p>
+        </div>
+        <p class="context">Used to summarize previous points.</p>
+        <ul class="arabic-examples">
+            <li class="arabic-example">
+                <span class="arabic">و كل هالشي كان عشان نحسن الأداء.</span>
+            </li>
+        </ul>
+        <div class="divider"></div>
+    </div>
+    
+    <div class="phrase">
+        <p><span class="arabic">أنا متفق معك مية بالمية!</span></p>
+        <div class="meaning">
+            <p class="literal-translation">I fully agree with you!</p>
+            <p class="english-equivalent">I completely agree!</p>
+        </div>
+        <p class="context">Used to express strong agreement.</p>
+        <ul class="arabic-examples">
+            <li class="arabic-example">
+                <span class="arabic">أنا متفق معك مية بالمية بهالموضوع.</span>
+            </li>
+        </ul>
+        <div class="divider"></div>
+    </div>
+    
+    <div class="phrase">
+        <p><span class="arabic">معظم الناس بفكروا هيك كمان!</span></p>
+        <div class="meaning">
+            <p class="literal-translation">Most people believe that too!</p>
+            <p class="english-equivalent">That's a common belief!</p>
+        </div>
+        <p class="context">Used to indicate a shared belief.</p>
+        <ul class="arabic-examples">
+            <li class="arabic-example">
+                <span class="arabic">معظم الناس بفكروا هيك كمان، خصوصاً بهالوقت.</span>
+            </li>
+        </ul>
+        <div class="divider"></div>
+    </div>
+    
+    <div class="phrase">
+        <p><span class="arabic">أكيد...</span></p>
+        <div class="meaning">
+            <p class="literal-translation">Without a doubt...</p>
+            <p class="english-equivalent">Definitely...</p>
+        </div>
+        <p class="context">Used to emphasize certainty.</p>
+        <ul class="arabic-examples">
+            <li class="arabic-example">
+                <span class="arabic">أكيد، لازم نعمل هيك.</span>
+            </li>
+        </ul>
+        <div class="divider"></div>
+    </div>
+    
+    <div class="phrase">
+        <p><span class="arabic">بالحقيقة كان ...</span></p>
+        <div class="meaning">
+            <p class="literal-translation">Actually, that was ...</p>
+            <p class="english-equivalent">In fact, that was ...</p>
+        </div>
+        <p class="context">Used to clarify or correct a point.</p>
+        <ul class="arabic-examples">
+            <li class="arabic-example">
+                <span class="arabic">بالحقيقة كان أصعب من ما توقعت.</span>
+            </li>
+        </ul>
+        <div class="divider"></div>
+    </div>
+    
+    <div class="phrase">
+        <p><span class="arabic">بخصوص هالشي...</span></p>
+        <div class="meaning">
+            <p class="literal-translation">In regard to this ...</p>
+            <p class="english-equivalent">Regarding this ...</p>
+        </div>
+        <p class="context">Used to introduce a related topic.</p>
+        <ul class="arabic-examples">
+            <li class="arabic-example">
+                <span class="arabic">بخصوص هالشي، خلينا نحكي عن الحلول.</span>
+            </li>
+        </ul>
+        <div class="divider"></div>
+    </div>
+    
+    <div class="phrase">
+        <p><span class="arabic">بعدها دغري ...</span></p>
+        <div class="meaning">
+            <p class="literal-translation">Right after that ...</p>
+            <p class="english-equivalent">Immediately after that ...</p>
+        </div>
+        <p class="context">Used to indicate sequence.</p>
+        <ul class="arabic-examples">
+            <li class="arabic-example">
+                <span class="arabic">بعدها دغري، رحنا نتعشى.</span>
+            </li>
+        </ul>
+        <div class="divider"></div>
+    </div>
+    
+    <div class="phrase">
+        <p><span class="arabic">باختصار، من غير ما نفوت بالتفاصيل ...</span></p>
+        <div class="meaning">
+            <p class="literal-translation">In short, without getting into details ...</p>
+            <p class="english-equivalent">To summarize ...</p>
+        </div>
+        <p class="context">Used to summarize information.</p>
+        <ul class="arabic-examples">
+            <li class="arabic-example">
+                <span class="arabic">باختصار، من غير ما نفوت بالتفاصيل، لازم نعمل خطة.</span>
+            </li>
+        </ul>
+        <div class="divider"></div>
+    </div>
+    
+    <div class="phrase">
+        <p><span class="arabic">برأيي ...</span></p>
+        <div class="meaning">
+            <p class="literal-translation">In my opinion ...</p>
+            <p class="english-equivalent">I personally think ...</p>
+        </div>
+        <p class="context">Used to express a personal opinion.</p>
+        <ul class="arabic-examples">
+            <li class="arabic-example">
+                <span class="arabic">برأيي، لازم ننتظر شوي.</span>
+            </li>
+        </ul>
+        <div class="divider"></div>
+    </div>
+    
+    <div class="phrase">
+        <p><span class="arabic">بالآخر ...</span></p>
+        <div class="meaning">
+            <p class="literal-translation">Last but not least ...</p>
+            <p class="english-equivalent">And finally ...</p>
+        </div>
+        <p class="context">Used to conclude a series of points.</p>
+        <ul class="arabic-examples">
+            <li class="arabic-example">
+                <span class="arabic">بالآخر، شكراً إلكم على حضوركم.</span>
+            </li>
+        </ul>
+        <div class="divider"></div>
+    </div>
+    
+
+      <div id="proverbs" class="item hidden">
+        <h2>الأمثال الشعبية (Proverbs)</h2>
+        <div class="phrase">
+          <p>
+            <span class="arabic">العلم في الصغر كالنقش على الحجر</span>
+          </p>
+          <div class="meaning">
+            <p class="literal-translation">
+              Knowledge in youth is like engraving on stone
+            </p>
+            <p class="english-equivalent">
+              Learning in youth sticks with you for life
+            </p>
+          </div>
+          <p class="context">
+            This proverb emphasizes the importance of learning during youth.
+          </p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">العلم في الصغر كالنقش على الحجر.</span>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </div>
+
+        <div class="phrase">
+          <p>
+            <span class="arabic">لكل جواد كبوة</span>
+          </p>
+          <div class="meaning">
+            <p class="literal-translation">Every horse has a stumble</p>
+            <p class="english-equivalent">Everyone makes mistakes</p>
+          </div>
+          <p class="context">
+            This proverb is used to remind someone that mistakes happen even to
+            the best.
+          </p>
+          <ul class="arabic-examples">
+            <li class="arabic-example">
+              <span class="arabic">لكل جواد كبوة، حتى الخبراء قد يخطئون.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
